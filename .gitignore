@@ -28,8 +28,12 @@
 *.out
 *.app
 
-#
-.opendb
-.sdf
-.sln
-.filters
+# VS dependant files
+*.opendb
+*.sdf
+*.sln
+*.filters
+*.vs
+
+# Release build folder
+x64/

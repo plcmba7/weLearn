@@ -29,4 +29,7 @@
 *.app
 
 #
-.VC.opendb
+.opendb
+.sdf
+.sln
+.filters

@@ -34,6 +34,8 @@
 *.sln
 *.filters
 *.vs
+*.db
 
 # Release build folder
 x64/
+Release/

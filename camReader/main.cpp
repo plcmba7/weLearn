@@ -1,9 +1,13 @@
 /*  For description look into the help() function. */
 
+// OpenCV headers
 #include "opencv\cv.h"  
 #include "opencv2/core/core.hpp"
 #include "opencv2/opencv.hpp"
 #include "opencv\highgui.h"
+
+// Z-bar header
+#include <zbar.h>
 
 // other headers 
 #include "ImageFactory.h"  
@@ -11,6 +15,7 @@
 
 using namespace std;
 using namespace cv;
+using namespace zbar;
 
 static void help()
 {
@@ -28,15 +33,17 @@ int main(int, char**)
 		return -1;
 
 	Mat edges;
-	namedWindow("edges", 1);
+	//ImageScanner imgscanner;
+
+	namedWindow("camReader", CV_WINDOW_AUTOSIZE);
+	//imgscanner.set_config()
+
 	for (;;)
 	{
 		Mat frame;
 		cap >> frame; // get a new frame from camera
-		cvtColor(frame, edges, COLOR_BGR2GRAY);
-		cv::GaussianBlur(edges, edges, Size(7, 7), 1.5, 1.5);
-		Canny(edges, edges, 0, 30, 3);
-		imshow("edges", edges);
+		cvtColor(frame, edges, 0); // converts the image one from color space to another
+		imshow("camReader", edges);
 		if (waitKey(30) >= 0) break;
 	}
 	return 0;

@@ -10,4 +10,4 @@ namespace imageFactory
 		~ImageFactory() {}
 	};
 }
-#endif // !IMAGEFACTORY_H
+#endif // IMAGEFACTORY_H

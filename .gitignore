@@ -35,7 +35,8 @@
 *.filters
 *.vs
 *.user
-*.vcxproj
 
 # Release build folder
 x64/
+/camReader/Debug/
+/camReader/Release/

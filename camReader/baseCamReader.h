@@ -1,6 +1,7 @@
 #pragma once
 
 #ifndef BASECAMREADER_H
+#define BASECAMREADER_H
 
 /// Abstract base class that acts the interface.
 /// Note: If you are deriving from this class, implement the virtual methods ( at least a dummy implementation
